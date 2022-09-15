@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220915 12:32:29.180" rpa="false" schemaversion="3">
+<suite id="s1" name="TestCases" source="C:\Users\user\Desktop\Flipkart_Zoomba\TestCase\TestCases.robot">
+<test id="s1-t1" name="User should be able to search a product" line="7">
+<kw name="Given Open flipkart Website" library="Instructions">
+<kw name="Open Browser" library="Zoomba.GUILibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220915 12:32:29.631" level="INFO">Opening browser 'chrome' to base url 'https://www.flipkart.com/'.</msg>
+<status status="PASS" starttime="20220915 12:32:29.630" endtime="20220915 12:32:35.325"/>
+</kw>
+<kw name="Maximize Browser Window" library="Zoomba.GUILibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220915 12:32:35.325" endtime="20220915 12:32:35.501"/>
+</kw>
+<kw name="Click Button" library="Zoomba.GUILibrary">
+<arg>${cross}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220915 12:32:35.503" level="INFO">Clicking button 'xpath://*[@class="_2KpZ6l _2doB4z"]'.</msg>
+<status status="PASS" starttime="20220915 12:32:35.501" endtime="20220915 12:32:35.805"/>
+</kw>
+<status status="PASS" starttime="20220915 12:32:29.629" endtime="20220915 12:32:35.805"/>
+</kw>
+<kw name="AND User Searchs For A Product" library="Instructions">
+<kw name="Input Text" library="Zoomba.GUILibrary">
+<arg>${searchbar}</arg>
+<arg>${product}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220915 12:32:35.809" level="INFO">Typing text 'Iphone 12 mini' into text field 'xpath://*[@class="_3704LK"]'.</msg>
+<status status="PASS" starttime="20220915 12:32:35.808" endtime="20220915 12:32:36.083"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220915 12:32:39.084" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220915 12:32:36.083" endtime="20220915 12:32:39.084"/>
+</kw>
+<kw name="Click Element" library="Zoomba.GUILibrary">
+<arg>${Entersearch}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220915 12:32:39.085" level="INFO">Clicking element 'xpath://*[@class="L0Z3Pu"]'.</msg>
+<status status="PASS" starttime="20220915 12:32:39.084" endtime="20220915 12:32:39.215"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220915 12:32:42.217" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220915 12:32:39.215" endtime="20220915 12:32:42.217"/>
+</kw>
+<status status="PASS" starttime="20220915 12:32:35.807" endtime="20220915 12:32:42.217"/>
+</kw>
+<kw name="AND User Should Scroll to 6th Element" library="Instructions">
+<kw name="Scroll Element Into View" library="Zoomba.GUILibrary">
+<arg>${Device}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220915 12:32:42.219" endtime="20220915 12:32:42.549"/>
+</kw>
+<status status="PASS" starttime="20220915 12:32:42.218" endtime="20220915 12:32:42.549"/>
+</kw>
+<kw name="Then User Clicks That Element" library="Instructions">
+<kw name="Click Element" library="Zoomba.GUILibrary">
+<arg>${Device}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220915 12:32:42.551" level="INFO">Clicking element 'xpath://div[normalize-space()='APPLE iPhone 12 Mini (White, 128 GB)']'.</msg>
+<status status="PASS" starttime="20220915 12:32:42.551" endtime="20220915 12:32:42.714"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220915 12:32:45.727" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220915 12:32:42.714" endtime="20220915 12:32:45.727"/>
+</kw>
+<status status="PASS" starttime="20220915 12:32:42.550" endtime="20220915 12:32:45.728"/>
+</kw>
+<kw name="Then User Add's To Cart" library="Instructions">
+<kw name="Switch Window" library="Zoomba.GUILibrary">
+<arg>New</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220915 12:32:45.729" endtime="20220915 12:32:45.749"/>
+</kw>
+<kw name="Click Element" library="Zoomba.GUILibrary">
+<arg>${addtocart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220915 12:32:45.750" level="INFO">Clicking element 'xpath://*[@class='_2KpZ6l _2U9uOA _3v1-ww']'.</msg>
+<kw name="Save Selenium Screenshot" library="Zoomba.GUILibrary">
+<doc>Takes a screenshot with a unique filename to be stored in Robot Framework compiled reports.</doc>
+<msg timestamp="20220915 12:32:52.253" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=105.0.5195.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x008878B3+2193587]
+	Ordinal0 [0x00820681+1771137]
+	Ordinal0 [0x007341A8+803240]
+	Ordinal0 [0x0071C910+706832]
+	Ordinal0 [0x00780139+1114425]
+	Ordinal0 [0x0078D282+1168002]
+	Ordinal0 [0x0077D5C6+1103302]
+	Ordinal0 [0x007577E0+948192]
+	Ordinal0 [0x007586E6+952038]
+	GetHandleVerifier [0x00B30CB2+2738370]
+	GetHandleVerifier [0x00B221B8+2678216]
+	GetHandleVerifier [0x009117AA+512954]
+	GetHandleVerifier [0x00910856+509030]
+	Ordinal0 [0x0082743B+1799227]
+	Ordinal0 [0x0082BB68+1817448]
+	Ordinal0 [0x0082BC55+1817685]
+	Ordinal0 [0x00835230+1856048]
+	BaseThreadInitThunk [0x7653FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77C97B5E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C97B2E+238]
+</msg>
+<status status="FAIL" starttime="20220915 12:32:52.207" endtime="20220915 12:32:52.370"/>
+</kw>
+<msg timestamp="20220915 12:32:52.370" level="WARN">Keyword 'Save Selenium Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=105.0.5195.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x008878B3+2193587]
+	Ordinal0 [0x00820681+1771137]
+	Ordinal0 [0x007341A8+803240]
+	Ordinal0 [0x0071C910+706832]
+	Ordinal0 [0x00780139+1114425]
+	Ordinal0 [0x0078D282+1168002]
+	Ordinal0 [0x0077D5C6+1103302]
+	Ordinal0 [0x007577E0+948192]
+	Ordinal0 [0x007586E6+952038]
+	GetHandleVerifier [0x00B30CB2+2738370]
+	GetHandleVerifier [0x00B221B8+2678216]
+	GetHandleVerifier [0x009117AA+512954]
+	GetHandleVerifier [0x00910856+509030]
+	Ordinal0 [0x0082743B+1799227]
+	Ordinal0 [0x0082BB68+1817448]
+	Ordinal0 [0x0082BC55+1817685]
+	Ordinal0 [0x00835230+1856048]
+	BaseThreadInitThunk [0x7653FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77C97B5E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C97B2E+238]
+</msg>
+<msg timestamp="20220915 12:32:52.449" level="FAIL">Element with locator 'xpath://*[@class='_2KpZ6l _2U9uOA _3v1-ww']' not found.</msg>
+<status status="FAIL" starttime="20220915 12:32:45.749" endtime="20220915 12:32:52.450"/>
+</kw>
+<status status="FAIL" starttime="20220915 12:32:45.729" endtime="20220915 12:32:52.453"/>
+</kw>
+<kw name="Then User Verify The Item" library="Instructions">
+<status status="NOT RUN" starttime="20220915 12:32:52.490" endtime="20220915 12:32:52.490"/>
+</kw>
+<status status="FAIL" starttime="20220915 12:32:29.626" endtime="20220915 12:32:52.515">Element with locator 'xpath://*[@class='_2KpZ6l _2U9uOA _3v1-ww']' not found.</status>
+</test>
+<status status="FAIL" starttime="20220915 12:32:29.183" endtime="20220915 12:32:52.532"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TestCases">TestCases</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220915 12:32:52.370" level="WARN">Keyword 'Save Selenium Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=105.0.5195.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x008878B3+2193587]
+	Ordinal0 [0x00820681+1771137]
+	Ordinal0 [0x007341A8+803240]
+	Ordinal0 [0x0071C910+706832]
+	Ordinal0 [0x00780139+1114425]
+	Ordinal0 [0x0078D282+1168002]
+	Ordinal0 [0x0077D5C6+1103302]
+	Ordinal0 [0x007577E0+948192]
+	Ordinal0 [0x007586E6+952038]
+	GetHandleVerifier [0x00B30CB2+2738370]
+	GetHandleVerifier [0x00B221B8+2678216]
+	GetHandleVerifier [0x009117AA+512954]
+	GetHandleVerifier [0x00910856+509030]
+	Ordinal0 [0x0082743B+1799227]
+	Ordinal0 [0x0082BB68+1817448]
+	Ordinal0 [0x0082BC55+1817685]
+	Ordinal0 [0x00835230+1856048]
+	BaseThreadInitThunk [0x7653FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77C97B5E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C97B2E+238]
+</msg>
+</errors>
+</robot>
